@@ -1,9 +1,12 @@
 %div{:class => "container"}
 
   %h1 Create New Pup
-
+  
   - flash.each do |key, value|
     %p= value
+
+
+
 
   = form_tag pups_path, :class => "form-horizontal" do
     %div{:class => "form-group"}
@@ -61,3 +64,14 @@
       = text_field :pup, 'comments', :class => "form-control"
     %div{:class => "form-group"}
       = submit_tag 'Add Pup', :id => 'Add Pup', :class => "form-control"
+      / http://bootsnipp.com/user/snippets/0M39d
+  %div{:class =>"container"}
+    %div{:class =>"box"}
+      %form{:class => "form-horizontal form-pricing", :role=>"form"}
+        %div{:class =>"price-slider"}
+          %h4{:class => "great"} Duration
+          %span Minimum 1 day is required
+          %div{:class=>"col-sm-12"}
+            %div{:id=>"slider2"}
+  %script{:src=>"https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"}
+
