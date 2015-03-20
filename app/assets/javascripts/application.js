@@ -19,9 +19,9 @@ $(document).ready(function() {
           $("#slider").slider({
               animate: true,
               value:1,
-              min: 0,
-              max: 1000,
-              step: 10,
+              min: 1,
+              max: 5,
+              step: 1,
               slide: function(event, ui) {
                   update(1,ui.value); //changed
               }
@@ -29,9 +29,9 @@ $(document).ready(function() {
 
           $("#slider2").slider({
               animate: true,
-              value:0,
-              min: 0,
-              max: 500,
+              value:1,
+              min: 1,
+              max: 5,
               step: 1,
               slide: function(event, ui) {
                   update(2,ui.value); //changed
@@ -67,5 +67,5 @@ $(document).ready(function() {
          $( "#total-label" ).text($total);
 
          $('#slider a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
-         $('#slider2 a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$duration+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+         $('#slider2 a').html('<label><span class="fa fa-paw"></span>');
       }

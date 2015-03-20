@@ -31,6 +31,6 @@ group :assets do
   gem 'coffee-rails'
 end
 
-
+gem "font-awesome-rails"
 gem 'omniauth-facebook', :github => 'mkdynamic/omniauth-facebook'
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
