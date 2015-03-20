@@ -1,84 +1,101 @@
-%div{:class => "container"}
+%body{:style => "background-color:#EBFAFF"}
+  %div{:class => "container"}
 
-  %h1 Create New Pup
-  
-  - flash.each do |key, value|
-    %p= value
+    %h1 Create New Pup
+    
+    - flash.each do |key, value|
+      %p= value
 
-
-
-
-  = form_tag pups_path, :class => "form-horizontal" do
-    %div{:class => "form-group"}
-      = label :pup, :pup_name, 'Pup Name'
-      = text_field :pup, 'pup_name', :class => "form-control", :placeholder => "Enter Pup Name"
-    %div{:class => "form-group"}
-      = label :pup, :owner_name, 'Owner Name'
-      = text_field :pup, 'owner_name', :class => "form-control", :placeholder => "Enter Owner Name"
-      / = label :pup, :breeder, 'Breeder'
-      / = text_field :pup, 'breeder'
-    %div{:class => "form-group"}
-      %table{:class => "table table-striped"}
-        %tr
-          %td
-            = label :pup, :breed_1, "Primary Breed"
-          %td
-            = select :pup, :breed_1, @all_breeds, {:class => 'form-control'}
-        %tr
-          %td
-            = label :pup, :breed_2, "Secondary Breed"
-          %td
-            = select :pup, :breed_2, @all_breeds_none, :class => "form-control"
-        %tr
-          %td
-            = label :pup, :breeder_responsibility, 'Breeder Responsibility'
-          %td
-            = select :pup, :breeder_responsibility, [1,2,3,4,5]
-        %tr
-          %td
-            = label :pup, :overall_health, 'Overall Health'
-          %td
-            = select :pup, :overall_health, [1,2,3,4,5]
-        %tr
-          %td
-            = label :pup, :trainability, 'Trainability'
-          %td
-            = select :pup, :trainability, [1,2,3,4,5]
-        %tr
-          %td
-            = label :pup, :social_behavior, 'Social Behavior'
-          %td
-            = select :pup, :social_behavior, [1,2,3,4,5]
-        %tr
-          %td
-            = label :pup, :energy_level, 'Energy Level'
-          %td
-            = select :pup, :energy_level, [1,2,3,4,5]
-        %tr
-          %td
-            = label :pup, :simpatico_rating, 'Simpatico Rating'
-          %td
-            = select :pup, :simpatico_rating, [1,2,3,4,5]
-    %div{:class => "form-group"}
-      = label :pup, :comments, 'Comments'
-      = text_field :pup, 'comments', :class => "form-control"
-    %div{:class => "form-group"}
-      = submit_tag 'Add Pup', :id => 'Add Pup', :class => "form-control"
-      / http://bootsnipp.com/user/snippets/0M39d
-  %div{:class =>"container"}
-    %div{:class =>"box"}
-      %form{:class => "form-horizontal form-pricing", :role=>"form"}
-        %div{:class =>"price-slider"}
-          %div{:class => "row"}
-            %div{:class=>"col-sm-6 pull-left"}
+    / = form_tag pups_path, :class => "form-horizontal" do
+    /   %div{:class => "form-group"}
+    /     = label :pup, :pup_name, 'Pup Name'
+    /     = text_field :pup, 'pup_name', :class => "form-control", :placeholder => "Enter Pup Name"
+    /   %div{:class => "form-group"}
+    /     = label :pup, :owner_name, 'Owner Name'
+    /     = text_field :pup, 'owner_name', :class => "form-control", :placeholder => "Enter Owner Name"
+    /     / = label :pup, :breeder, 'Breeder'
+    /     / = text_field :pup, 'breeder'
+    /   %div{:class => "form-group"}
+    /     %table{:class => "table table-striped"}
+    /       %tr
+    /         %td
+    /           = label :pup, :breed_1, "Primary Breed"
+    /         %td
+    /           = select :pup, :breed_1, @all_breeds, {:class => 'form-control'}
+    /       %tr
+    /         %td
+    /           = label :pup, :breed_2, "Secondary Breed"
+    /         %td
+    /           = select :pup, :breed_2, @all_breeds_none, :class => "form-control"
+    /       %tr
+    /         %td
+    /           = label :pup, :breeder_responsibility, 'Breeder Responsibility'
+    /         %td
+    /           = select :pup, :breeder_responsibility, [1,2,3,4,5]
+    /       %tr
+    /         %td
+    /           = label :pup, :overall_health, 'Overall Health'
+    /         %td
+    /           = select :pup, :overall_health, [1,2,3,4,5]
+    /       %tr
+    /         %td
+    /           = label :pup, :trainability, 'Trainability'
+    /         %td
+    /           = select :pup, :trainability, [1,2,3,4,5]
+    /       %tr
+    /         %td
+    /           = label :pup, :social_behavior, 'Social Behavior'
+    /         %td
+    /           = select :pup, :social_behavior, [1,2,3,4,5]
+    /       %tr
+    /         %td
+    /           = label :pup, :energy_level, 'Energy Level'
+    /         %td
+    /           = select :pup, :energy_level, [1,2,3,4,5]
+    /       %tr
+    /         %td
+    /           = label :pup, :simpatico_rating, 'Simpatico Rating'
+    /         %td
+    /           = select :pup, :simpatico_rating, [1,2,3,4,5]
+    /   %div{:class => "form-group"}
+    /     = label :pup, :comments, 'Comments'
+    /     = text_field :pup, 'comments', :class => "form-control"
+    /   %div{:class => "form-group"}
+    /     = submit_tag 'Add Pup', :id => 'Add Pup', :class => "form-control"
+    
+    / http://bootsnipp.com/user/snippets/0M39d
+    %div{:class =>"container"}
+      %div{:class =>"box"}
+        %form{:class => "form-horizontal form-pricing", :role=>"form"}
+          %div{:class =>"price-slider row"}
+            %div{:class=>"col-sm-6"}
               %h4{:class => "great"} Breeder Responsibility
               %span Responsible dog breeders screen their breeder dogs for breed-related genetic problems, provide a health guarantee and ongoing support for the puppies they sell, and provide excellent health care and quality of life for their breeding dogs, even after the dogs are done with breeding. We recommend that you ask any dog breeder about their policies before buying a puppy from them. Please rate the breeder of your dog for the level of responsibility they demonstrated.
             %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider2"}
-        %div{:class =>"price-slider"}
-          %h4{:class => "great"} Overall Health
-          %span Minimum 1 day is required
-          %div{:class=>"col-sm-6 pull-right"}
-            %div{:id=>"slider"}
-  %script{:src=>"https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"}
+              %div{:id=>"slider-breeder"}
+          %div{:class =>"price-slider row"}
+            %div{:class=>"col-sm-6"}
+              %h4{:class => "great"} Overall Health
+              %span Please rate your dog's overall health in the time that you have had him/her. Please do not consider health problems that were the result of accidental injuries, since these are beyond the breeder's control.
+            %div{:class=>"col-sm-6 pull-right"}
+              %div{:id=>"slider-health"}
+          %div{:class =>"price-slider row"}
+            %div{:class=>"col-sm-6"}
+              %h4{:class => "great"} Trainability
+              %span Please rate how easy your dog has been to train: consider housetraining, obedience training, and basic manners.
+            %div{:class=>"col-sm-6 pull-right"}
+              %div{:id=>"slider-train"}
+          %div{:class =>"price-slider row"}
+            %div{:class=>"col-sm-6"}
+              %h4{:class => "great"} Social Behavior 
+              %span Most people want companion dogs that are friendly and non-aggressive in social situations toward adults, children, and other dogs, and pets. Please rate your dog's social response to others.
+            %div{:class=>"col-sm-6 pull-right"}
+              %div{:id=>"slider-social"}
+          %div{:class =>"price-slider row"}
+            %div{:class=>"col-sm-6"}
+              %h4{:class => "great"} Energy Level
+              %span Some dogs require a lot of physical exercise to keep them happy and calm, whereas others are content to sleep most of the day. Please rate your dog's overall energy level and exercise requirement at maturity (1--7 years of age)
+            %div{:class=>"col-sm-6 pull-right"}
+              %div{:id=>"slider-energy"}
+    %script{:src=>"https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"}
 

@@ -16,7 +16,7 @@
 //= require bootstrap.min
 
 $(document).ready(function() {
-          $("#slider").slider({
+          $("#slider-breeder").slider({
               animate: true,
               value:1,
               min: 1,
@@ -27,7 +27,37 @@ $(document).ready(function() {
               }
           });
 
-          $("#slider2").slider({
+          $("#slider-health").slider({
+              animate: true,
+              value:1,
+              min: 1,
+              max: 5,
+              step: 1,
+              slide: function(event, ui) {
+                  update(1,ui.value); //changed
+              }
+          });
+          $("#slider-train").slider({
+              animate: true,
+              value:1,
+              min: 1,
+              max: 5,
+              step: 1,
+              slide: function(event, ui) {
+                  update(2,ui.value); //changed
+              }
+          });
+          $("#slider-social").slider({
+              animate: true,
+              value:1,
+              min: 1,
+              max: 5,
+              step: 1,
+              slide: function(event, ui) {
+                  update(2,ui.value); //changed
+              }
+          });
+          $("#slider-energy").slider({
               animate: true,
               value:1,
               min: 1,
@@ -66,6 +96,7 @@ $(document).ready(function() {
          $( "#total" ).val($total);
          $( "#total-label" ).text($total);
 
-         $('#slider a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
-         $('#slider2 a').html('<label><span class="fa fa-paw"></span>');
+         $('#slider-health a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+         $('#slider-train a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+         $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
       }
