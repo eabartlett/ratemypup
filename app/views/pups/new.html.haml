@@ -1,7 +1,7 @@
 %body{:style => "background-color:#EBFAFF"}
   %div{:class => "container"}
 
-    %h1 Create New Pup
+    %h1{:class => "new-pup"} Create New Pup
     
     - flash.each do |key, value|
       %p= value
@@ -66,6 +66,13 @@
     / http://bootsnipp.com/user/snippets/0M39d
     %div{:class =>"container"}
       %div{:class =>"box"}
+        = form_tag pups_path, :class => " col-sm-9" do
+          %div{:class => "form-group"}
+            = label :pup, :pup_name, 'Pup Name'
+            = text_field :pup, 'pup_name', :class => "form-control", :placeholder => "Enter Pup Name"
+          %div{:class => "form-group"}
+            = label :pup, :owner_name, 'Owner Name'
+            = text_field :pup, 'owner_name', :class => "form-control", :placeholder => "Enter Owner Name"
         %form{:class => "form-horizontal form-pricing", :role=>"form"}
           = render 'slider_rating', title: "Breeder Responsibility", slider: "slider-breeder", description: "Responsible dog breeders screen their breeder dogs for breed-related genetic problems, provide a health guarantee and ongoing support for the puppies they sell, and provide excellent health care and quality of life for their breeding dogs, even after the dogs are done with breeding. We recommend that you ask any dog breeder about their policies before buying a puppy from them. Please rate the breeder of your dog for the level of responsibility they demonstrated."
           = render 'slider_rating', title: "Overall Health", slider: "slider-health", description: "Please rate your dog's overall health in the time that you have had him/her. Please do not consider health problems that were the result of accidental injuries, since these are beyond the breeder's control."
