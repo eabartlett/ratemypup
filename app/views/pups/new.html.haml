@@ -67,35 +67,11 @@
     %div{:class =>"container"}
       %div{:class =>"box"}
         %form{:class => "form-horizontal form-pricing", :role=>"form"}
-          %div{:class =>"price-slider row"}
-            %div{:class=>"col-sm-6"}
-              %h4{:class => "great"} Breeder Responsibility
-              %span Responsible dog breeders screen their breeder dogs for breed-related genetic problems, provide a health guarantee and ongoing support for the puppies they sell, and provide excellent health care and quality of life for their breeding dogs, even after the dogs are done with breeding. We recommend that you ask any dog breeder about their policies before buying a puppy from them. Please rate the breeder of your dog for the level of responsibility they demonstrated.
-            %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider-breeder"}
-          %div{:class =>"price-slider row"}
-            %div{:class=>"col-sm-6"}
-              %h4{:class => "great"} Overall Health
-              %span Please rate your dog's overall health in the time that you have had him/her. Please do not consider health problems that were the result of accidental injuries, since these are beyond the breeder's control.
-            %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider-health"}
-          %div{:class =>"price-slider row"}
-            %div{:class=>"col-sm-6"}
-              %h4{:class => "great"} Trainability
-              %span Please rate how easy your dog has been to train: consider housetraining, obedience training, and basic manners.
-            %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider-train"}
-          %div{:class =>"price-slider row"}
-            %div{:class=>"col-sm-6"}
-              %h4{:class => "great"} Social Behavior 
-              %span Most people want companion dogs that are friendly and non-aggressive in social situations toward adults, children, and other dogs, and pets. Please rate your dog's social response to others.
-            %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider-social"}
-          %div{:class =>"price-slider row"}
-            %div{:class=>"col-sm-6"}
-              %h4{:class => "great"} Energy Level
-              %span Some dogs require a lot of physical exercise to keep them happy and calm, whereas others are content to sleep most of the day. Please rate your dog's overall energy level and exercise requirement at maturity (1--7 years of age)
-            %div{:class=>"col-sm-6 pull-right"}
-              %div{:id=>"slider-energy"}
+          = render partial: 'slider_rating', :locals => {custom_string: 'foobar', title: "Breeder Responsibility", slider: "slider-breeder", description: "esponsible dog breeders screen their breeder dogs for breed-related genetic problems, provide a health guarantee and ongoing support for the puppies they sell, and provide excellent health care and quality of life for their breeding dogs, even after the dogs are done with breeding. We recommend that you ask any dog breeder about their policies before buying a puppy from them. Please rate the breeder of your dog for the level of responsibility they demonstrated."}
+          = render 'slider_rating', title: "Overall Health", slider: "slider-health", description: "Please rate your dog's overall health in the time that you have had him/her. Please do not consider health problems that were the result of accidental injuries, since these are beyond the breeder's control."
+          = render 'slider_rating', title: "Trainability", slider: "slider-train", description: "Please rate how easy your dog has been to train: consider housetraining, obedience training, and basic manners."
+          = render 'slider_rating', title: "Social Behavior ", slider: "slider-social", description: "Most people want companion dogs that are friendly and non-aggressive in social situations toward adults, children, and other dogs, and pets. Please rate your dog's social response to others."
+          = render 'slider_rating', title: "Energy Level", slider: "slider-energy", description: "Some dogs require a lot of physical exercise to keep them happy and calm, whereas others are content to sleep most of the day. Please rate your dog's overall energy level and exercise requirement at maturity (1--7 years of age)"
+
     %script{:src=>"https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"}
 
