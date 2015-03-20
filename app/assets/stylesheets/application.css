@@ -102,6 +102,15 @@ h1.new-pup {
 	display: inline-block;
 }
 
+.great {
+	padding: 7px 15px;
+	color: #111111;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 5px;
+	/*display: inline-block;*/
+}
+
 .price-slider {
 	margin-bottom: 70px;
 }
