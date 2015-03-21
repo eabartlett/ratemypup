@@ -21,6 +21,8 @@
           = render 'slider_rating', title: "Trainability", slider: "slider-train", description: "Please rate how easy your dog has been to train: consider housetraining, obedience training, and basic manners."
           = render 'slider_rating', title: "Social Behavior ", slider: "slider-social", description: "Most people want companion dogs that are friendly and non-aggressive in social situations toward adults, children, and other dogs, and pets. Please rate your dog's social response to others."
           = render 'slider_rating', title: "Energy Level", slider: "slider-energy", description: "Some dogs require a lot of physical exercise to keep them happy and calm, whereas others are content to sleep most of the day. Please rate your dog's overall energy level and exercise requirement at maturity (1--7 years of age)"
+      %div
+        = render 'tags_input'
       %div{:class => "form-group great"}
         = render 'text_input', title: 'Comments', var: 'comments', placeholder: ""
       %div{:class => "form-group"}
