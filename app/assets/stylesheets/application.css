@@ -25,19 +25,19 @@
 
 
 .ui-widget-content {
-	border: 1px solid #bdc3c7;
+	border: 3px solid #bdc3c7;
 	background: #e1e1e1;
 	color: #222222;
-	margin-top: 4px;
+	margin-top: 0px;
 }
 
 .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
-	width: 5.2em;
+	width: 3em;
 	height: 2.2em;
 	cursor: default;
-	margin: 0 -40px auto !important;
+	/*margin: 0 -40px auto !important;*/
 	text-align: center;	
 	line-height: 30px;
 	color: #FFFFFF;
@@ -80,17 +80,23 @@
 }
 
 h4.great {
-	background: #0B0B61;
+	padding: 7px 0px;
+	color: #111111;
+	font-size: 15px;
+	font-weight: 600;
+	border-radius: 5px;
+	display: inline-block;
+/*	background: #0B0B61;
+	color: #ffffff;
 	margin: 0 0 25px 0px;
 	padding: 7px 15px;
-	color: #ffffff;
 	font-size: 18px;
 	font-weight: 600;
 	border-radius: 5px;
 	display: inline-block;
 	-moz-box-shadow:    2px 4px 5px 0 #ccc;
   	-webkit-box-shadow: 2px 4px 5px 0 #ccc;
-  	box-shadow:         2px 4px 5px 0 #ccc;
+  	box-shadow:         2px 4px 5px 0 #ccc;*/
 }
 
 h1.new-pup {
@@ -112,7 +118,7 @@ h1.new-pup {
 }
 
 .price-slider {
-	margin-bottom: 70px;
+	margin-bottom: 30px;
 }
 
 .price-slider span {
