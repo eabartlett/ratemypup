@@ -26,6 +26,7 @@ $(document).ready(function() {
                   update(1,ui.value); //changed
               }
           });
+          $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
 
           $("#slider-health").slider({
               animate: true,
@@ -98,5 +99,5 @@ $(document).ready(function() {
 
          $('#slider-health a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
          $('#slider-train a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$amount+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
-         $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
+         // $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
       }
