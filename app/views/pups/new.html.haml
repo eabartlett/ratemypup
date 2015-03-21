@@ -1,4 +1,5 @@
-%body{:style => "background-color:#EBFAFF"}
+/ %body{:style => "background-color:#EBFAFF"}
+%body
   %div{:class => "container"}
 
     %h1{:class => "new-pup"} Create New Pup
@@ -25,7 +26,7 @@
         = render 'tags_input'
       %div{:class => "form-group great"}
         = render 'text_input', title: 'Comments', var: 'comments', placeholder: ""
-      %div{:class => "form-group"}
+      %div{:class => "form-group col-sm-4"}
         = submit_tag 'Add Pup', :id => 'Add Pup', :class => "form-control"
 
 
