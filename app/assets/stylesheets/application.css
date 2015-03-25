@@ -145,6 +145,60 @@ h1.new-pup {
   	box-shadow:         0 5px 5px 0 #ccc;*/
 }
 
+.tag-holder a {
+	font-family: "Source Sans Pro";
+	text-transform: uppercase;
+	font-weight: 700;}
+#chooseTagModal .tag-holder {
+	float: left;width: 100%;
+	padding: 10px;background: white;
+	margin-top: 20px;
+}
+#chooseTagModal .tag-holder a {
+	display: block;float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;background: #b8b8b3;
+	color: #fff;
+	font-family: "Source Sans Pro Black";l
+	etter-spacing: 0.14em;
+	text-decoration: none;
+	font-size: 12px;
+	margin-right: 6px;
+	margin-bottom: 6px;
+}
+#chooseTagModal .tag-holder a.active {
+	background: #00adee;
+}
+#chooseTagModal input[type="submit"] {
+	float: left;
+	width: 100%;
+	background: #00adee;
+	color: #fff;
+	font-family: "league_gothicregular";
+	font-size: 28px;
+	line-height: 50px;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+#chooseTagModal input[type="submit"]:active {
+	border: none;
+	outline: none;
+}
+.tag-holder, body.rate_school form.rate .form-element.tagger .tag-holder {
+	float: left;
+	width: 575px;
+	margin-left: 31px;
+	margin-top: 20px;
+	display: block;
+}
+
+
 .form-group {
 	margin-bottom: 0;
 }
