@@ -51,6 +51,16 @@ $(document).ready(function() {
                   update(5,ui.value); //changed
               }
           });
+          $("#slider-sympatico").slider({
+              animate: true,
+              value: 0,
+              min: 0,
+              max: 5,
+              step: 1,
+              slide: function(event, ui) {
+                  update(6,ui.value); //changed
+              }
+          });
 
           //Added, set initial value.
           $("#health").val(0);
@@ -58,11 +68,13 @@ $(document).ready(function() {
           $("#train").val(0);
           $("#social").val(0);
           $("#energy").val(0);
-          $("#breeder-label").text(0);
-          $("#health-label").text(0);
-          $("#train-label").text(0);
-          $("#social-label").text(0);
-          $("#energy-label").text(0);
+          $("#sympatico").val(0);
+          $("#breeder-label").val(0);
+          $("#health-label").val(0);
+          $("#train-label").val(0);
+          $("#social-label").val(0);
+          $("#energy-label").val(0);
+          $("#sympatico-label").val(0);
           
           update();
       });
@@ -75,16 +87,18 @@ $(document).ready(function() {
         var $train = slider == 3?val:$("#train").val();
         var $social = slider == 4?val:$("#social").val();
         var $energy = slider == 5?val:$("#energy").val();
+        var $sympatico = slider == 6?val:$("#sympatico").val();
         /* commented
         $amount = $( "#slider" ).slider( "value" );
         $duration = $( "#slider2" ).slider( "value" );
          */
 
         $("#breeder-label").val($breeder);
-        $("#health-label").text($health);
-        $("#train-label").text($train);
-        $("#social-label").text($social);
-        $("#energy-label").text($energy);
+        $("#health-label").val($health);
+        $("#train-label").val($train);
+        $("#social-label").val($social);
+        $("#energy-label").val($energy);
+        $("#sympatico").val($sympatico);
 
         // $total = "$" + ($amount * $duration);
         // $( "#amount" ).val($amount);
