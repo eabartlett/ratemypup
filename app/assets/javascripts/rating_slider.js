@@ -80,7 +80,7 @@ $(document).ready(function() {
         $duration = $( "#slider2" ).slider( "value" );
          */
 
-        $("#breeder-label").text($breeder);
+        $("#breeder-label").val($breeder);
         $("#health-label").text($health);
         $("#train-label").text($train);
         $("#social-label").text($social);

@@ -1,7 +1,9 @@
 %div{:class =>"price-slider row"}
     %div{:class=>"col-sm-6"}
         %h4{:class => "great"} #{title} 
-        %p{:id => id} 0
+        / %p{:id => id} 0
+        
+        = text_field :pup, var, :class => "form-control", :id => id
         %span #{description}
     %br
     %br
