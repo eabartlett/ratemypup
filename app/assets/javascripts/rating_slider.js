@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
           $("#slider-breeder").slider({
               animate: true,
@@ -10,7 +9,7 @@ $(document).ready(function() {
                   update(1,ui.value); //changed
               }
           });
-          $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
+          
 
           $("#slider-health").slider({
               animate: true,
@@ -54,15 +53,11 @@ $(document).ready(function() {
           });
 
           //Added, set initial value.
-          $("#amount").val(1);
-          $("#duration").val(1);
-          $("#amount-label").text(1);
-          $("#duration-label").text(1);
-          $("#health").val(1);
-          $("#breeder").val(1);
-          $("#train").val(1);
-          $("#social").val(1);
-          $("#energy").val(1);
+          $("#health").val(0);
+          $("#breeder").val(0);
+          $("#train").val(0);
+          $("#social").val(0);
+          $("#energy").val(0);
           $("#amount-label").text(1);
           $("#duration-label").text(1);
           $("#breeder-label").text(1);
@@ -96,7 +91,7 @@ $(document).ready(function() {
          // $( "#duration-label" ).text($duration);
          // $( "#total" ).val($total);
          // $( "#total-label" ).text($total);
-
+         $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
          $('#slider-health a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$health+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
          $('#slider-train a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> '+$train+' <span class="glyphicon glyphicon-chevron-right"></span></label>');
          // $('#slider-breeder a').html('<label><span class="fa fa-paw"></span>');
