@@ -1,5 +1,8 @@
 class PupsController < ApplicationController
-  
+
+  # Devise. Methods not in the list below will require a user to be logged in.
+  before_filter :authenticate_user!, except: [:index, :new, :main, :show, :breed]
+
   def index
     @pups = Pup.all
   end
