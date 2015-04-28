@@ -21,10 +21,11 @@
       = render 'text_input', title: 'Pup Name', var: 'pup_name', placeholder: "Name"
       %br
       = render 'breed_checkbox'
-    %div{:class => "form-group", :class => "sub-title"}
-      = label :pup, 'What breeder/kennel did your pup come from?'
-      = text_field :breeder, 'breeder', :class => "form-control", :id => "breeder_form", :placeholder => "Breeder/Kennel Name"
-      %div{:id => 'autofills', :class => "form-group col-md-12"}
+    %div{:class=>"col-sm-5 row"}
+      %div{:class => "form-group input-normal", :class => "sub-title"}
+        = label :pup, 'What breeder/kennel did your pup come from?'
+        = text_field :breeder, 'breeder', :class => "form-control", :id => "breeder_form", :placeholder => "Breeder/Kennel Name"
+        %div{:id => 'autofills', :class => "form-group col-md-12"}
 
     %div{:class => "sub-header"}
       %h3 How would you rate your pup?
