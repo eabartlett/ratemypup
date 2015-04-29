@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/mkdynamic/omniauth-facebook.git
-  revision: c3d2736896a27fa9d4111988b3b048bf79cfd4b6
+  revision: b127c35135b16b7d5cdc746a718192acfe1da21c
   specs:
     omniauth-facebook (2.1.0)
       omniauth-oauth2 (~> 1.2)
