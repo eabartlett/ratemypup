@@ -48,6 +48,7 @@ When /^I follow "(.*)"$/ do |link|
 end
 
 Then /^I should( not)? see "(.*)"/ do |not_see, text|
+  puts page.body
   if not_see != nil
 		assert page.has_no_content?(text)
   else
