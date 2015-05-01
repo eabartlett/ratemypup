@@ -180,3 +180,7 @@ Given (/^I login as an admin$/) do
   fill_in(:admin_user_password, :with => 'password')
   find('#admin_user_submit_action').click
 end
+
+Then /^I should see the "(.*)" link$/ do |name|
+  find_link(name).should_not be_nil
+end
